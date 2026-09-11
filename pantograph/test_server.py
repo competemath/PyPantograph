@@ -7,7 +7,7 @@ class TestServer(unittest.TestCase):
         """
         NOTE: Update this after upstream updates.
         """
-        self.assertEqual(get_version(), "0.3.15")
+        self.assertEqual(get_version(), "0.3.19")
 
     def test_server_init_del(self):
         import warnings
@@ -232,7 +232,7 @@ class TestServer(unittest.TestCase):
         definitions = server.env_catalog(module_prefix="Init", invert_filter=True)
         self.assertEqual(
             set(definitions),
-            {'dfoo._sunfold', 'dfoo._unsafe_rec', 'dfoo', 'dfoo.match_1'}
+            {'dfoo._sunfold', 'dfoo._unsafe_rec', 'dfoo', 'dfoo.match_1', 'dfoo._f'}
         )
 
     def test_env_parse(self):
